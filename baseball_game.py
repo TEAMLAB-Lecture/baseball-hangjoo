@@ -279,6 +279,10 @@ def main():
             user_input = None
             while True:
                 user_input = input("Input guess number : ")
+                if user_input == "0":
+                    print("Thank you for using this program")
+                    print("End of the Game")
+                    exit()
                 if is_validated_number(user_input):
                     break
                 else:
@@ -288,28 +292,18 @@ def main():
             if result[0] == 3:
                 break
 
-        end_flag = None
         while True:
             end_input = input("You win, one more(Y/N)?")
             if is_yes(end_input):
-                end_flag = False
                 break
             elif is_no(end_input):
-                end_flag = True
-                break
+                print("Thank you for using this program")
+                print("End of the Game")
+                exit()
             else:
                 continue
-
-        if end_flag:
-            break
-
         # ==================================
-    print("Thank you for using this program")
-    print("End of the Game")
 
 
 if __name__ == "__main__":
-    # main()
-    from test_baseball_game import TestBaseballGame
-    tester = TestBaseballGame()
-    tester.test_main()
+    main()
