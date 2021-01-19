@@ -284,7 +284,7 @@ def main():
                 else:
                     print("Wrong Input, Input again")
             result = get_strikes_or_ball(user_input, random_number)
-            print(f"Strikes : {result[0]}, Balls : {result[1]}")
+            print(f"Strikes : {result[0]} , Balls : {result[1]}")
             if result[0] == 3:
                 break
 
@@ -309,4 +309,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # main()
+    from test_baseball_game import TestBaseballGame
+    tester = TestBaseballGame()
+    tester.test_main()
