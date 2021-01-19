@@ -305,6 +305,7 @@ def main():
                 session_flag = False
                 break
             else:
+                print("Wrong Input, Input again")
                 continue
 
         if not session_flag:
